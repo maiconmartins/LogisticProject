@@ -17,6 +17,7 @@ public class ClientDashboard extends javax.swing.JFrame {
     public ClientDashboard() {
        
         initComponents();
+        this.dispose();
          this.setLocationRelativeTo(null);
     }
 
