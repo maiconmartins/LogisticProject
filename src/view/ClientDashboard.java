@@ -19,6 +19,7 @@ public class ClientDashboard extends javax.swing.JFrame {
         initComponents();
        
          this.setLocationRelativeTo(null);
+         this.setAlwaysOnTop(true);
     }
 
 
