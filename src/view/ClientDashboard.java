@@ -32,8 +32,8 @@ public class ClientDashboard extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel3 = new javax.swing.JLabel();
+        ComboBox = new javax.swing.JComboBox<>();
+        Label_Check_ = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,17 +82,22 @@ public class ClientDashboard extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "09:00 am", "09:30 am", "10:00 am", "10:30 am", "11:00 am", "11:30 am", "12:00 ", "12:30 pm", "13:00 pm", "13:30 pm", "14:00 pm", "14:30 pm", "15:00 pm", "15:30 pm", "16:00 pm", "16:30 pm", "17:00 pm" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        ComboBox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        ComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "09:00 am", "09:30 am", "10:00 am", "10:30 am", "11:00 am", "11:30 am", "12:00 ", "12:30 pm", "13:00 pm", "13:30 pm", "14:00 pm", "14:30 pm", "15:00 pm", "15:30 pm", "16:00 pm", "16:30 pm", "17:00 pm" }));
+        ComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                ComboBoxActionPerformed(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("   Check");
-        jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Label_Check_.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Label_Check_.setText("   Check");
+        Label_Check_.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Label_Check_.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Label_Check_MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -102,19 +107,19 @@ public class ClientDashboard extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(98, 98, 98)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Label_Check_, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Label_Check_, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38))
         );
 
@@ -137,17 +142,24 @@ public class ClientDashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    private void ComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxActionPerformed
+       
+      
+            
+        
+    }//GEN-LAST:event_ComboBoxActionPerformed
+
+    private void Label_Check_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Label_Check_MouseClicked
+       System.out.println("You have no deliveries at " + ComboBox.getSelectedItem());
+    }//GEN-LAST:event_Label_Check_MouseClicked
 
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> ComboBox;
+    private javax.swing.JLabel Label_Check_;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
