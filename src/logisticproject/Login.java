@@ -10,6 +10,7 @@ import java.beans.Statement;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
+import java.sql.ResultSet;
 
 /**
  *
@@ -131,12 +132,12 @@ public class Login extends javax.swing.JFrame {
 //        view.DashBoard dash = new view.DashBoard();
 //       dash.setVisible(true);
         try {
-            Class.forName("com.msql.jdbc.Driver");
-            String dbServer = "jdbc:msql://localhost:3306/logindb";
+            Class.forName("com.mysql.jdbc.Driver");
+            String dbServer = "jdbc:mysql://localhost:3306/logindb";
             String username = "root";
             String password = "";
 
-            String sql = "Select * from logindatabase where username=? & password=?";
+            String sql = "Select * from logindatabase where username=? and password=?";
             java.sql.Connection conn = DriverManager.getConnection(dbServer, username, password);
 
             PreparedStatement pst = conn.prepareStatement(sql);
@@ -144,7 +145,9 @@ public class Login extends javax.swing.JFrame {
             pst.setString(2, password_field_.getText());
 
             pst.executeQuery();
-            if (pst.executeQuery().next()) {
+            ResultSet rs = pst.executeQuery();
+            
+            if (rs.next()) {
                 JOptionPane.showMessageDialog(null, "Username and Password Matched");
             } else {
                 JOptionPane.showMessageDialog(null, "Username and Password dont match");
@@ -154,7 +157,7 @@ public class Login extends javax.swing.JFrame {
             }
             conn.close();
 
-        } catch (Exception e) {
+        } catch (Exception e) {    
 
             JOptionPane.showMessageDialog(null, e);
         }
