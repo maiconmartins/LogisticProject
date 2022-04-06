@@ -39,7 +39,7 @@ public class Login extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jButton_Reset_3 = new javax.swing.JButton();
         password_field = new javax.swing.JPasswordField();
-        jLabel_Register_3 = new javax.swing.JLabel();
+        Label_register_ = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,8 +61,8 @@ public class Login extends javax.swing.JFrame {
 
         jButton_Reset_3.setText("Reset");
 
-        jLabel_Register_3.setText("Click here to Register");
-        jLabel_Register_3.addMouseListener(new java.awt.event.MouseAdapter() {
+        Label_register_.setText("Click here to Register");
+        Label_register_.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_Register_MouseClicked(evt);
             }
@@ -88,7 +88,7 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(153, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_Transparent_Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel_Register_3, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Label_register_, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(184, 184, 184))
         );
         jPanel_Transparent_Layout.setVerticalGroup(
@@ -107,7 +107,7 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(jButton_Submit_3)
                     .addComponent(jButton_Reset_3))
                 .addGap(41, 41, 41)
-                .addComponent(jLabel_Register_3)
+                .addComponent(Label_register_)
                 .addContainerGap(45, Short.MAX_VALUE))
         );
 
@@ -136,8 +136,8 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_Register_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_Register_MouseClicked
-        //   RegisterForm reg = new RegisterForm();
-        //   reg.setVisible(true);
+           RegisterForm reg = new RegisterForm();
+           reg.setVisible(true);
 
 
     }//GEN-LAST:event_jLabel_Register_MouseClicked
@@ -182,6 +182,7 @@ public class Login extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Label_register_;
     private javax.swing.JButton jButton_Reset_;
     private javax.swing.JButton jButton_Reset_1;
     private javax.swing.JButton jButton_Reset_2;
@@ -202,7 +203,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_Register_;
     private javax.swing.JLabel jLabel_Register_1;
     private javax.swing.JLabel jLabel_Register_2;
-    private javax.swing.JLabel jLabel_Register_3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
