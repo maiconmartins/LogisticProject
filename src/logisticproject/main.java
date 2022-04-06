@@ -5,7 +5,7 @@
  */
 package logisticproject;
 
-/**
+/*
  *
  * @author user
  */
