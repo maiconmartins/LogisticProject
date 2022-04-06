@@ -171,19 +171,20 @@ public class RegisterForm extends javax.swing.JFrame {
             java.sql.Connection conn = DriverManager.getConnection(dbServer, username, password);
 
             PreparedStatement pst = conn.prepareStatement(sql);
-         
+            pst.setString(1, jCompany.getText());
+            pst.setString(2, jPass.getText());
 
             //pst.executeQuery();
             pst.executeUpdate();
-           
+            JOptionPane.showMessageDialog(null, "REGISTER SUCCESSFULLY");
 
-           // ResultSet rs = pst.executeQuery();
+            ResultSet rs = pst.executeQuery();
 
             if (rs.next()) {
 
-               
+                view.DashBoard dash = new view.DashBoard();
 
-                JOptionPane.showMessageDialog(null, "");
+                JOptionPane.showMessageDialog(null, "Username and Password Matched");
                 dash.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(null, "Username and Password dont match");
